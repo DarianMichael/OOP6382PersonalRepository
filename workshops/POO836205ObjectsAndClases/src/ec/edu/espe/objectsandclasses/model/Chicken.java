@@ -1,14 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ec.edu.espe.objectsandclasses.model;
 
-/**
- *
- * @author DARIAN
- */
+
 public class Chicken {
-    
+   private String name; 
+   private String colour; 
+   private int age; 
+   private boolean molting; 
+   
+   public void doStuff (){
+       
+   }
+   
+   private void cluck (){
+       System.out.println("The chicken" +name+ "is clucking");
+   }
+   
+   private void wander (){
+       System.out.println("The chicken" +name+ "is wandering");
+   }
 }
