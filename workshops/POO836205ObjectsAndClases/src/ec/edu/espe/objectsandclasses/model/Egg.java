@@ -10,5 +10,11 @@ package ec.edu.espe.objectsandclasses.model;
  * @author DARIAN
  */
 class Egg {
+    private int idEgg;
+
+    public Egg(int idEgg) {
+        this.idEgg = idEgg;
+    }
+    
     
 }
