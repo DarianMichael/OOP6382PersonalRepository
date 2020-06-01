@@ -41,7 +41,7 @@ public class Archive {
         try{
             Version versionEum = Version.valueOf(version);
         }catch(IllegalArgumentException e){
-            throw new RuntimeException("Invalid value for my enum : " + version);
+            throw new RuntimeException("Invalid value the version : " + version);
         }
         
         System.out.print("Enter the cubic capacity of the car: ");

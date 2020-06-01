@@ -55,5 +55,9 @@ public class Chicken {
                 + "\n Molting = " + isMolting;
     }
     
-    
+    public String generateCsvData(){
+        return id + " , " + name 
+                +  " , " + colour +  " , " + age 
+                +  " , " + isMolting;
+    }
 }
