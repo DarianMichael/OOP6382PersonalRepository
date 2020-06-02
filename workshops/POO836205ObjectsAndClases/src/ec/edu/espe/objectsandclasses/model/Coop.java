@@ -12,6 +12,8 @@ public class Coop {
     }
     
     public void addChickens(Chicken chicken){
+       /* chicken.id = 2;
+        chicken.name = "Lucia";*/
         
     }
     

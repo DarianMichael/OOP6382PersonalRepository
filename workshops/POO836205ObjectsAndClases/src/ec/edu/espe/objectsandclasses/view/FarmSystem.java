@@ -17,5 +17,13 @@ public class FarmSystem {
         fileManager.createFile(fileName);
         fileManager.writeString(chicken.generateCsvData(), fileName);
         fileManager.read(fileName);
+        
+        /*chicken.id = 4;
+        chicken.name = "Lucia";*/
+        
+        chicken.setId(0);
+        chicken.setName("Lucia");
+        
+        System.out.println(chicken.getName());
     }
 }

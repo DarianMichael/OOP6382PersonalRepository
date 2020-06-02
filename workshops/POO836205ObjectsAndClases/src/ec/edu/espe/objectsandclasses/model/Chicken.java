@@ -4,7 +4,7 @@ package ec.edu.espe.objectsandclasses.model;
 
 public class Chicken {
 
-    private int id;
+    int id;
     private String name;
     private String colour;
     private int age;
@@ -17,7 +17,47 @@ public class Chicken {
         this.age = age;
         this.isMolting = molting;
     }
+ 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColour() {
+        return colour;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public boolean isIsMolting() {
+        return isMolting;
+    }
+
+    public void setIsMolting(boolean isMolting) {
+        this.isMolting = isMolting;
+    }
+    
     public void doStuff(int forTime) {
         cluck();
         wander();
@@ -60,4 +100,5 @@ public class Chicken {
                 +  " , " + colour +  " , " + age 
                 +  " , " + isMolting;
     }
+
 }
