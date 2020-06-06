@@ -1,7 +1,7 @@
 
 package ec.edu.espe.temperatureconverter.view;
 
-import ec.edu.espe.temperatureconverter.utils.KeyboardInput;
+import ec.edu.espe.temperatureconverter.controller.KeyboardInput;
 
 
 public class TemperatureConverterSystem {

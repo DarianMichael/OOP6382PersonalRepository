@@ -1,7 +1,8 @@
-package ec.edu.espe.temperatureconverter.utils;
+package ec.edu.espe.temperatureconverter.controller;
 
 import ec.edu.espe.temperatureconverter.model.Celsius;
 import ec.edu.espe.temperatureconverter.model.Farenheit;
+import ec.edu.espe.temperatureconverter.utils.TemperatureConverter;
 import java.util.Scanner;
 
 public class KeyboardInput {
