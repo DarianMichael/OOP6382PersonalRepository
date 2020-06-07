@@ -1,7 +1,7 @@
 
 package ec.edu.espe.carfile.view;
 
-import ec.edu.espe.carfile.model.Archive;
+import ec.edu.espe.carfile.controller.Archive;
 import java.io.IOException;
 
 

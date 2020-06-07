@@ -1,6 +1,7 @@
+package ec.edu.espe.carfile.controller;
 
-package ec.edu.espe.carfile.model;
-
+import ec.edu.espe.carfile.model.Car;
+import ec.edu.espe.carfile.model.Version;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -10,48 +11,51 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-
 public class Archive {
-    
-    File carFile;
+
+    private File carFile;
+    private static final Scanner dataEntry = new Scanner(System.in);
 
     public void createFile() throws IOException {
         carFile = new File("carFile.txt");
         if (!carFile.exists()) {
             carFile.createNewFile();
-        } 
+        }
         introduceData();
     }
 
     public void introduceData() throws IOException {
-        Scanner dataEntry = new Scanner(System.in);
 
         System.out.print("Enter the car brand: ");
-        String brand= dataEntry.nextLine();
-  
+        String brand = dataEntry.nextLine();
+        while (isNumeric(brand)){
+            System.out.println("Numbers are not allowed");
+            System.out.println("Enter the car brand again : ");
+            brand = dataEntry.nextLine();
+        }
         System.out.print("Enter the car model: ");
-        String model= dataEntry.nextLine();
-        
+        String model = dataEntry.nextLine();
+
         System.out.print("Enter the car colour: ");
-        String colour= dataEntry.nextLine();
-        
+        String colour = dataEntry.nextLine();
+
         System.out.print("Enter the version of the car: STANDARD, SEMIFULL or FULL: ");
         String version = dataEntry.nextLine();
         System.out.println("Version: " + version);
-        try{
+        try {
             Version versionEum = Version.valueOf(version);
-        }catch(IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             throw new RuntimeException("Invalid value the version : " + version);
         }
-        
+
         System.out.print("Enter the cubic capacity of the car: ");
-        int displacement= dataEntry.nextInt();
+        int displacement = dataEntry.nextInt();
         while (displacement <= 0) {
             System.out.println("Incorrect data cannot be less than zero or zero");
             System.out.print("Enter the cubic capacity of the car again: ");
             displacement = dataEntry.nextInt();
-        }       
-  
+        }
+
         System.out.print("Enter the price of the car: ");
         int price = dataEntry.nextInt();
         while (price <= 0) {
@@ -60,7 +64,7 @@ public class Archive {
             price = dataEntry.nextInt();
         }
 
-        Car car = new Car(brand, model, colour, displacement,Version.valueOf(version), price);
+        Car car = new Car(brand, model, colour, displacement, Version.valueOf(version), price);
 
         System.out.println("\nData were recorded");
 
@@ -69,7 +73,7 @@ public class Archive {
         try (FileWriter toWriter = new FileWriter(carFile, true);
                 PrintWriter toWriterLine = new PrintWriter(toWriter)) {
 
-            toWriterLine.print(" , " + brand);
+            toWriterLine.print("  " + brand);
             toWriterLine.print(" , " + model);
             toWriterLine.print(" , " + colour);
             toWriterLine.print(" , " + displacement);
@@ -96,4 +100,12 @@ public class Archive {
 
     }
 
+    private static boolean isNumeric(String chain) {
+        try {
+            Integer.parseInt(chain);
+            return true;
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+    }
 }
