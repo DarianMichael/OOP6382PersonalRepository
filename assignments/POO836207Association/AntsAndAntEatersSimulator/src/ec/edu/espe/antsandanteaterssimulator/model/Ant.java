@@ -31,6 +31,6 @@ public class Ant {
     }
     
     public void run(){
-        
+        PheromoneDrop pheromoneDrop = new PheromoneDrop();
     }
 }
