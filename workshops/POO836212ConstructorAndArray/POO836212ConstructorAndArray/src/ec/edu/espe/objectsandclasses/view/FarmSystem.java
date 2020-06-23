@@ -65,5 +65,10 @@ public class FarmSystem {
         for (int i = 0; i < coopMaxSize2; i++) {
             System.out.println(chickens1[i]);
         }
+        
+        short addend1 = 20000;
+        short addend2 = 20000;
+        short total = (short) (addend1 + addend2);
+        System.out.println(total);
     }
 }
