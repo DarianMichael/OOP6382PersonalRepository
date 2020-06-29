@@ -28,7 +28,7 @@ public class Archive {
 
         System.out.print("Enter the car brand: ");
         String brand = dataEntry.nextLine();
-        while (isNumeric(brand)){
+        while (isNumeric(brand)) {
             System.out.println("Numbers are not allowed");
             System.out.println("Enter the car brand again : ");
             brand = dataEntry.nextLine();
