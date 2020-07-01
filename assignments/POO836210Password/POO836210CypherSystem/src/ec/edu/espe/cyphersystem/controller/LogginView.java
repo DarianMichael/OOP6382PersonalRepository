@@ -6,7 +6,7 @@
 package ec.edu.espe.cyphersystem.controller;
 
 import ec.edu.espe.cyphersystem.model.User;
-import ec.edu.espe.cyphersystem.util.SecurityUtil;
+import ec.edu.espe.cyphersystem.util.SecurityPassword;
 import java.io.Console;
 import java.util.List;
 import java.util.Scanner;
@@ -16,9 +16,9 @@ import java.util.Scanner;
  * @author Darian M. Martinez ESPE DCCO
  */
 public class LogginView {
-   
+
     private static final Scanner dataEntry = new Scanner(System.in);
-    
+
     private List<User> users;
 
     public LogginView(List<User> users) {
@@ -26,12 +26,12 @@ public class LogginView {
     }
 
     public User login() {
-        
+
         Console console = System.console();
         System.out.println("Enter user name");
         String name = dataEntry.nextLine();
         System.out.println("Enter your password");
-        String password = SecurityUtil.cipherTest(dataEntry.nextLine());
+        String password = SecurityPassword.cipherText(dataEntry.nextLine());
         return validateUser(name, password);
     }
 
@@ -43,6 +43,7 @@ public class LogginView {
                 return user;
             }
         }
+        System.out.println("Username and password do not match, please try again...");
         return null;
     }
 }

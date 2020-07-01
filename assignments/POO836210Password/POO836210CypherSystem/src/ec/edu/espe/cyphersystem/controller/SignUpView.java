@@ -7,7 +7,7 @@ package ec.edu.espe.cyphersystem.controller;
 
 import ec.edu.espe.cyphersystem.model.Role;
 import ec.edu.espe.cyphersystem.model.User;
-import ec.edu.espe.cyphersystem.util.SecurityUtil;
+import ec.edu.espe.cyphersystem.util.SecurityPassword;
 import java.util.Scanner;
 import javax.swing.JFrame;
 
@@ -16,9 +16,9 @@ import javax.swing.JFrame;
  * @author Darian M. Martinez ESPE DCCO
  */
 public class SignUpView {
-    
+
     private static final Scanner dataEntry = new Scanner(System.in);
-     
+
     public String[] roles = {"ADMINISTRATOR", "CASHIER"};
 
     private String password;
@@ -42,9 +42,12 @@ public class SignUpView {
         String name = dataEntry.nextLine();
         do {
             System.out.println("Enter your password: ");
-            password = SecurityUtil.cipherTest(dataEntry.nextLine());
+            password = SecurityPassword.cipherText(dataEntry.nextLine());
             System.out.println("Confirm your password: ");
-            confirmationPassword = SecurityUtil.cipherTest(dataEntry.nextLine());
+            confirmationPassword = SecurityPassword.cipherText(dataEntry.nextLine());
+            if (!password.equals(confirmationPassword)) {
+                System.out.println("Passwords don't match, try again...");
+            }
         } while (!password.equals(confirmationPassword));
         System.out.println("ADMINISTRATOR or CASHIER");
         String role = dataEntry.nextLine();
