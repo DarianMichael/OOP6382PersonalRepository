@@ -1,0 +1,29 @@
+<Bill>
+	<idBill>1<idBill>
+	<Client>
+        <name>Darian</name>
+		<lastName>Alfonso</lastName>
+		<age>37</age>
+		<telephone>0995900546</telephone>
+    </Client>
+    <listPairsOfShoes>
+        <PairOfShoes>
+            <idShoe>1000</idShoe>
+            <size>42</size>
+			<brand>adidas<brand>
+			<price>24.6<price>
+			<color>white<color>
+			<shoeType>sport<shoeType>
+        </PairOfShoes>
+        <PairOfShoes>
+            <idShoe>2001</idShoe>
+            <size>43</size>
+			<brand>lacoste<brand>
+			<price>39.6<price>
+			<color>brown<color>
+			<shoeType>casual<shoeType>
+        </PairOfShoes>
+    </listPairsOfShoes>
+	<totalPrice>64.20<totalPrice>
+	<date>2020-07-08T12:46:11-05:00<date>
+</Bill>

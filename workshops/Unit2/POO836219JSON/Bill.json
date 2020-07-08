@@ -1,0 +1,33 @@
+{
+   "Bill" :{
+      "idBill" : 1,
+	      "Client" :{
+			   "name" : "Darian",
+			   "lastName" : "Alfonso",
+			   "age" : 37,
+			   "telephone" : "0995900546"
+		   },
+		   "listPairsOfShoes" :[
+				{
+					"idShoe" : 1000,
+					"size" : "42",
+					"brand" : "adidas",
+					"price" : 24.60,
+					"color" : "white",
+					"shoeType" : "sport"
+				},
+				{
+					"idShoe" : 2001,
+					"size" : "43",
+					"brand" : "lacoste",
+					"price" : 39.60,
+					"color" : "brown",
+					"shoeType" : "casual"
+				}
+			],	
+					
+		"totalPrice" : 64.20,
+		"date" : "2020-07-08T12:46:11-05:00"
+	}
+
+ }      	   
