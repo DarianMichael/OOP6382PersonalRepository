@@ -23,7 +23,7 @@ public class SecurityUtil {
 
     }
 
-   /* public static String cipherTest(String rawPassword) {
+    public static String cipherTest(String rawPassword) {
 
         MessageDigest md = null;
         try {
@@ -35,15 +35,5 @@ public class SecurityUtil {
         byte[] digest = md.digest();
         String myHash = DatatypeConverter.printHexBinary(digest).toUpperCase();
         return myHash;
-    }*/
-    
-    public static String cipherTest(String rawPassword){
-        String myHash;
-        StringBuilder stringBuilder = new StringBuilder();
-        char [] arrayPassword = rawPassword.toCharArray();
-        for (int i = 0; i < arrayPassword.length; i++) {
-            stringBuilder.append(Integer.toString(arrayPassword[i] + 1));
-        }
-        return myHash = stringBuilder.toString();
     }
 }
