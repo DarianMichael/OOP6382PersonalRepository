@@ -1,0 +1,18 @@
+{
+  "microphones": [
+    {
+      "brand": "Sony",
+      "color": "blue",
+      "impedance": "5.000-15.000 ohmnios",
+      "maxSoundPressure": "135dB",
+      "sensibility": 1.00
+    },
+	{
+      "brand": "Samsung",
+      "color": "white",
+      "impedance": "5.000-15.000 ohmnios",
+      "maxSoundPressure": "135dB",
+      "sensibility": 1.00
+    }
+  ]
+}
